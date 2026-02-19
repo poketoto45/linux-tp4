@@ -72,6 +72,8 @@ Connexion instantanée sans mot de passe.
 
 Redémarrage : `sudo systemctl restart ssh`
 
+![test port 2222](https://github.com/poketoto45/linux-tp4/blob/main/image/connection%20ssh%202222.png)
+
 ---
 
 ## 6. Configuration d’un alias SSH
@@ -84,9 +86,13 @@ Host serveur-tp
     User etudiant
     Port 2222
 
-```
+``
+
+![alias](https://github.com/poketoto45/linux-tp4/blob/main/image/definition%20alias.png)
 
 Connexion : `ssh serveur-tp`
+
+![test alias](https://github.com/poketoto45/linux-tp4/blob/main/image/alias%20.png)
 
 ---
 
@@ -106,7 +112,9 @@ Suivi en temps réel des tentatives de connexion :
 sudo tail -f /var/log/auth.log
 
 ```
+![log1](https://github.com/poketoto45/linux-tp4/blob/main/image/HTTPS%20avec%20certificat%20auto-signé.png)
 
+![log2](https://github.com/poketoto45/linux-tp4/blob/main/image/tail%20encore%20%2B.png)
 ---
 
 ## 9. Installation et analyse de Fail2Ban
@@ -118,7 +126,7 @@ sudo apt install fail2ban
 sudo fail2ban-client status sshd
 
 ```
-
+![fail2ban](https://github.com/poketoto45/linux-tp4/blob/main/image/fail2ban.png)
 ---
 
 ## 10. Tunnel SSH
@@ -164,7 +172,10 @@ Tests de pannes : service arrêté, mauvais port, permissions `chmod` incorrecte
 sudo apt install nginx
 
 ```
+![Nginx](https://github.com/poketoto45/linux-tp4/blob/main/image/install%20status%20Nginx%20.png)
 
+
+![conf Nginx](https://github.com/poketoto45/linux-tp4/blob/main/image/configuration%20Nginx%20.png)
 ### 13.2 Page test
 
 ```bash
@@ -172,6 +183,7 @@ sudo mkdir -p /var/www/site-tp
 sudo vim /var/www/site-tp/index.html
 
 ```
+![testt nginx](https://github.com/poketoto45/linux-tp4/blob/main/image/diffution%20par%20Nginx%20.png)
 
 ### 13.3 Configuration Vhost
 
@@ -192,12 +204,7 @@ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout site-tp.key -ou
 
 Configuration du port 443 et redirection automatique du port 80 vers 443.
 
-### 14.3 Test HTTPS
-
-```bash
-curl -k https://<IP_VM>
-
-```
+![Nginx](https://github.com/poketoto45/linux-tp4/blob/main/image/HTTPS%20avec%20certificat%20auto-signé.png)
 
 ---
 
