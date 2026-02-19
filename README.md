@@ -86,7 +86,7 @@ Host serveur-tp
     User etudiant
     Port 2222
 
-``
+```
 
 ![alias](https://github.com/poketoto45/linux-tp4/blob/main/image/definition%20alias.png)
 
@@ -100,8 +100,9 @@ Connexion : `ssh serveur-tp`
 
 * **SCP :** `scp fichier.txt serveur-tp:/home/etudiant/`
 * **SFTP :** `sftp serveur-tp` (Commandes `put`, `get`, `ls`)
-* **RSYNC :** `rsync -avz dossier/ serveur-tp:/home/etudiant/`
+![scp transfer](https://github.com/poketoto45/linux-tp4/blob/main/image/scp%20txt%20et%20blender.png)
 
+![verif](https://github.com/poketoto45/linux-tp4/blob/main/image/verif%20scp%20et%20sftp.png)
 ---
 
 ## 8. Analyse des logs
@@ -146,7 +147,7 @@ ssh -L 8080:localhost:80 serveur-tp
 ssh -R 9090:localhost:22 serveur-tp
 
 ```
-
+![tunnel ssh](https://github.com/poketoto45/linux-tp4/blob/main/image/tunnel%20ssh.png)
 ---
 
 ## 11. Simulation d’incidents et diagnostic
@@ -161,7 +162,8 @@ Tests de pannes : service arrêté, mauvais port, permissions `chmod` incorrecte
 * [x] Accès Root interdit.
 * [x] Mot de passe désactivé.
 * [x] Fail2Ban opérationnel.
-
+![fail ssh1](https://github.com/poketoto45/linux-tp4/blob/main/image/ssh%20denied.png)
+![fail ssh2](https://github.com/poketoto45/linux-tp4/blob/main/image/ssh%20stop.png)
 ---
 
 ## 13. Installation et configuration Nginx
