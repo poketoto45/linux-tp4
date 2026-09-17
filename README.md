@@ -168,7 +168,7 @@ Tests de pannes : service arrêté, mauvais port, permissions `chmod` incorrecte
 
 ## 13. Installation et configuration Nginx
 
-### 13.1 Installation
+### 13 .1 Installation
 
 ```bash
 sudo apt install nginx
